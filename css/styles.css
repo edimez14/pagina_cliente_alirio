@@ -1,4 +1,10 @@
 /* Estilos globales */
+:root {
+  --primary-green: #0a6b3a;
+  --secondary-green: #0d8a4f;
+  --accent-gold: #ffd700; /* Amarillo dorado suave */
+  --light-gold: #fff9c4; /* Amarillo muy claro para fondos */
+}
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +21,7 @@ body {
 
 /* Header */
 header {
-  background-color: #fff;
+  background-color: var(--light-gold);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -34,18 +40,22 @@ header {
 .logo {
   font-size: 24px;
   font-weight: 700;
-  color: #0a6b3a;
+  color: var(--primary-green);
   display: flex;
   align-items: center;
 }
 
 .logo i {
   margin-right: 10px;
-  color: #0a6b3a;
+  color: var(--primary-green);
 }
 
 .cta-button {
-  background: linear-gradient(to right, #0a6b3a, #0d8a4f);
+  background: linear-gradient(
+    to right,
+    var(--primary-green),
+    var(--secondary-green)
+  );
   color: white;
   padding: 12px 25px;
   border-radius: 30px;
@@ -62,7 +72,12 @@ header {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #0a6b3a 0%, #0d8a4f 100%);
+  background: linear-gradient(
+      135deg,
+      var(--primary-green) 0%,
+      var(--secondary-green) 100%
+    ),
+    radial-gradient(circle at top right, var(--accent-gold), transparent 30%);
   color: white;
   padding: 180px 5%;
   text-align: center;
@@ -116,7 +131,7 @@ header {
   text-align: center;
   font-size: 2.2rem;
   margin-bottom: 50px;
-  color: #0a6b3a;
+  color: var(--primary-green);
   font-weight: 700;
 }
 
@@ -144,19 +159,18 @@ header {
 
 .feature-icon {
   font-size: 2.5rem; /* Más pequeño */
-  color: #0a6b3a;
+  color: var(--accent-gold);
   margin-bottom: 15px; /* Menos espacio */
 }
 
 .feature-card h3 {
   font-size: 1.2rem; /* Más pequeño */
   margin-bottom: 10px; /* Menos espacio */
-  color: #0a6b3a;
+  color: var(--primary-green);
 }
 
 .stats {
   padding: 60px 5%;
-  background: white;
   text-align: center;
 }
 
@@ -307,6 +321,10 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.price-card h2 {
+  color: var(--accent-gold);
+}
+
 .price {
   font-size: 3.5rem;
   font-weight: 700;
@@ -375,7 +393,7 @@ header {
 .step-number {
   font-size: 3.5rem;
   font-weight: 700;
-  color: #0a6b3a;
+  color: var(--accent-gold);
   margin-bottom: 15px;
   line-height: 1;
 }
@@ -383,7 +401,7 @@ header {
 .step-title {
   font-size: 1.3rem;
   margin-bottom: 15px;
-  color: #0a6b3a;
+  color: var(--primary-green);
 }
 
 .step-description {
@@ -442,7 +460,7 @@ header {
 }
 
 .contact-detail i {
-  color: #0a6b3a;
+  color: var(--accent-gold);
   font-size: 1.2rem;
   width: 30px;
 }
@@ -466,7 +484,11 @@ header {
   position: absolute;
   bottom: 20px;
   right: 20px;
-  background: linear-gradient(to right, #0a6b3a, #0d8a4f);
+  background: linear-gradient(
+    to right,
+    var(--primary-green),
+    var(--secondary-green)
+  );
   color: white;
   padding: 12px 30px;
   border-radius: 30px;
@@ -524,7 +546,7 @@ footer {
   left: 0;
   width: 50px;
   height: 2px;
-  background: #0d8a4f;
+  background: var(--accent-gold);
 }
 
 .footer-column ul {
@@ -550,7 +572,7 @@ footer {
   padding-top: 30px;
   margin-top: 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: #b1d4c0;
+  color: var(--light-gold);
   font-size: 0.9rem;
 }
 
@@ -577,6 +599,7 @@ footer {
   width: 60px;
   height: 60px;
   background-color: #25d366;
+  animation: pulse-gold 2s infinite;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -609,5 +632,17 @@ footer {
     width: 50px;
     height: 50px;
     font-size: 24px;
+  }
+}
+
+@keyframes pulse-gold {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(255, 215, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
   }
 }
