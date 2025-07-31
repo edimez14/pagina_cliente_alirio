@@ -79,7 +79,7 @@ header {
     ),
     radial-gradient(circle at top right, var(--accent-gold), transparent 30%);
   color: white;
-  padding: 180px 5%;
+  padding: 120px 5% 80px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -119,6 +119,52 @@ header {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hero-logo-container {
+  max-width: 180px;
+  margin: 0 auto 20px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: pulse-gold 2s infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-logo {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+  max-width: 180px;
+  object-fit: contain;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-logo-container {
+    max-width: 140px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-logo-container {
+    max-width: 100px;
+  }
+
+  .hero {
+    padding: 90px 5% 60px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
 }
 
 /* Features Section */
@@ -644,5 +690,187 @@ footer {
   }
   100% {
     box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+  }
+}
+
+/* Estilos para el logo */
+.logo-img {
+  height: 40px;
+  max-width: 100%;
+  object-fit: contain;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Ajustes responsive para logo */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 30px;
+  }
+  .logo span {
+    font-size: 0.8em;
+  }
+}
+
+/* ==================== MEDIA QUERIES - MOBILE FIRST ==================== */
+@media (max-width: 768px) {
+  /* Header */
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 80px 5% 50px;
+  }
+
+  .hero-content {
+    padding: 0 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-logo-container {
+    max-width: 120px;
+    margin-bottom: 15px;
+  }
+
+  /* Features */
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .feature-card {
+    padding: 20px 15px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* About Me */
+  .about-me {
+    padding: 50px 5%;
+  }
+
+  .about-me-container {
+    flex-direction: column;
+  }
+
+  .about-me-card {
+    margin: 10px 0;
+  }
+
+  /* Product Section */
+  .product {
+    padding: 60px 5%;
+  }
+
+  /* Pricing */
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .price-card {
+    padding: 25px;
+    max-width: 100%;
+  }
+
+  /* Process */
+  .process {
+    padding: 50px 5%;
+  }
+
+  .process-steps {
+    flex-direction: column;
+  }
+
+  .step {
+    margin-bottom: 20px;
+    min-width: 100%;
+  }
+
+  /* Contact */
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-map {
+    height: 300px;
+    margin-top: 30px;
+  }
+
+  /* Footer */
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+
+  .footer-column h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* General */
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes adicionales para pantallas muy pequeñas */
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .hero-logo-container {
+    max-width: 100px;
+  }
+
+  .step-title {
+    font-size: 1.1rem;
+  }
+
+  .step-description {
+    font-size: 0.85rem;
+  }
+
+  .contact-detail {
+    font-size: 0.9rem;
   }
 }
