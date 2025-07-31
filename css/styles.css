@@ -2,8 +2,8 @@
 :root {
   --primary-green: #0a6b3a;
   --secondary-green: #0d8a4f;
-  --accent-gold: #ffd700; /* Amarillo dorado suave */
-  --light-gold: #fff9c4; /* Amarillo muy claro para fondos */
+  --accent-gold: #ffd700;
+  --light-gold: #fff9c4;
 }
 * {
   margin: 0;
@@ -141,32 +141,6 @@ header {
   object-fit: contain;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .hero-logo-container {
-    max-width: 140px;
-    margin-bottom: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-logo-container {
-    max-width: 100px;
-  }
-
-  .hero {
-    padding: 90px 5% 60px;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-}
-
 /* Features Section */
 .features {
   padding: 80px 5%;
@@ -192,11 +166,11 @@ header {
 .feature-card {
   background: #f8f8f8;
   border-radius: 10px;
-  padding: 10px; /* Más pequeño */
+  padding: 10px;
   text-align: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
-  height: 100%; /* Altura completa */
+  height: 100%;
 }
 
 .feature-card:hover {
@@ -204,14 +178,14 @@ header {
 }
 
 .feature-icon {
-  font-size: 2.5rem; /* Más pequeño */
+  font-size: 2.5rem;
   color: var(--accent-gold);
-  margin-bottom: 15px; /* Menos espacio */
+  margin-bottom: 15px;
 }
 
 .feature-card h3 {
-  font-size: 1.2rem; /* Más pequeño */
-  margin-bottom: 10px; /* Menos espacio */
+  font-size: 1.2rem;
+  margin-bottom: 10px;
   color: var(--primary-green);
 }
 
@@ -455,14 +429,6 @@ header {
   color: #555;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .step {
-    min-width: 100%;
-    max-width: 100%;
-  }
-}
-
 /* Contact Section */
 .contact {
   padding: 80px 5%;
@@ -552,17 +518,6 @@ header {
   box-shadow: 0 6px 20px rgba(10, 107, 58, 0.4);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column;
-  }
-
-  .contact-map {
-    height: 350px;
-  }
-}
-
 /* Footer */
 footer {
   background: #0a3b20;
@@ -622,21 +577,6 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .price {
-    font-size: 2.5rem;
-  }
-}
-
 /* Botón flotante de WhatsApp */
 .whatsapp-float {
   position: fixed;
@@ -670,17 +610,6 @@ footer {
   transform: scale(1.05);
 }
 
-/* Responsive para móviles */
-@media (max-width: 768px) {
-  .whatsapp-float {
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-  }
-}
-
 @keyframes pulse-gold {
   0% {
     box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4);
@@ -702,34 +631,92 @@ footer {
   vertical-align: middle;
 }
 
-/* Ajustes responsive para logo */
-@media (max-width: 768px) {
-  .logo-img {
-    height: 30px;
-  }
-  .logo span {
-    font-size: 0.8em;
-  }
+/* Estilos para el banner de cookies */
+.iubenda-cs-banner {
+  font-family: "Montserrat", sans-serif;
+  background: #0a6b3a !important;
+  color: white !important;
+  padding: 15px !important;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+.iubenda-cs-banner .iubenda-cs-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.iubenda-cs-banner p {
+  margin: 0 !important;
+  flex: 1;
+  min-width: 300px;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.iubenda-cs-banner .iubenda-cs-actions {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.iubenda-cs-banner .iubenda-cs-btn {
+  background: #ffd700 !important;
+  color: #0a6b3a !important;
+  border: none !important;
+  border-radius: 30px !important;
+  padding: 10px 20px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.iubenda-cs-banner .iubenda-cs-btn:hover {
+  background: #fff9c4 !important;
+  transform: translateY(-2px) !important;
+}
+
+.iubenda-cs-banner .iubenda-cs-customize-btn {
+  background: transparent !important;
+  border: 1px solid #ffd700 !important;
+  color: #ffd700 !important;
 }
 
 /* ==================== MEDIA QUERIES - MOBILE FIRST ==================== */
 @media (max-width: 768px) {
   /* Header */
   .header-container {
-    flex-direction: column;
     align-items: center;
     text-align: center;
+    flex-direction: row;
+    padding: 10px 5%;
   }
 
   .logo {
-    margin-bottom: 15px;
-    flex-direction: column;
+    flex-direction: row;
+    margin-bottom: 0;
     align-items: center;
   }
 
   .logo-img {
-    margin-right: 0;
-    margin-bottom: 10px;
+    height: 40px;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+  .logo span {
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+  }
+
+  .price {
+    font-size: 2.5rem;
   }
 
   /* Hero Section */
@@ -809,6 +796,8 @@ footer {
   .step {
     margin-bottom: 20px;
     min-width: 100%;
+    min-width: 100%;
+    max-width: 100%;
   }
 
   /* Contact */
@@ -846,10 +835,31 @@ footer {
     padding: 10px 20px;
     font-size: 0.9rem;
   }
+
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 480px) {
   /* Ajustes adicionales para pantallas muy pequeñas */
+  .logo span {
+    font-size: 0.8rem;
+    max-width: 120px;
+  }
+
+  .logo-img {
+    height: 35px;
+  }
+
+  .hero {
+    padding: 90px 5% 60px;
+  }
+
   .hero h1 {
     font-size: 1.5rem;
   }
@@ -875,57 +885,38 @@ footer {
   }
 }
 
-/* Estilos para el banner de cookies */
-.iubenda-cs-banner {
-  font-family: "Montserrat", sans-serif;
-  background: #0a6b3a !important;
-  color: white !important;
-  padding: 15px !important;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2) !important;
-}
+@media (max-width: 400px) {
+  body {
+    font-size: 14px;
+  }
 
-.iubenda-cs-banner .iubenda-cs-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
+  .contact-container {
+    gap: 20px;
+  }
 
-.iubenda-cs-banner p {
-  margin: 0 !important;
-  flex: 1;
-  min-width: 300px;
-  padding: 10px;
-  font-size: 14px;
-  line-height: 1.5;
-}
+  .contact-detail {
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+    padding: 15px;
+  }
 
-.iubenda-cs-banner .iubenda-cs-actions {
-  display: flex;
-  gap: 10px;
-  padding: 10px;
-}
+  .contact-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
 
-.iubenda-cs-banner .iubenda-cs-btn {
-  background: #ffd700 !important;
-  color: #0a6b3a !important;
-  border: none !important;
-  border-radius: 30px !important;
-  padding: 10px 20px !important;
-  font-weight: 600 !important;
-  cursor: pointer !important;
-  transition: all 0.3s ease !important;
-}
+  .contact-detail i {
+    min-width: 20px;
+  }
 
-.iubenda-cs-banner .iubenda-cs-btn:hover {
-  background: #fff9c4 !important;
-  transform: translateY(-2px) !important;
-}
+  .contact-map {
+    height: 250px;
+  }
 
-.iubenda-cs-banner .iubenda-cs-customize-btn {
-  background: transparent !important;
-  border: 1px solid #ffd700 !important;
-  color: #ffd700 !important;
+  .map-button {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+    bottom: 10px;
+    right: 10px;
+  }
 }

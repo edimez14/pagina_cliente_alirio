@@ -113,3 +113,13 @@ function showFallbackCookieBanner() {
         alert('Configuración de cookies - Esta funcionalidad requiere iubenda');
     });
 }
+
+// Normalizar URL del mapa
+document.addEventListener('DOMContentLoaded', function () {
+    const iframe = document.querySelector('.contact-map iframe');
+    const currentProtocol = window.location.protocol;
+
+    if (iframe.src.startsWith('//')) {
+        iframe.src = currentProtocol + iframe.src.substr(2);
+    }
+});
