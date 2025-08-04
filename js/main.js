@@ -123,3 +123,37 @@ document.addEventListener('DOMContentLoaded', function () {
         iframe.src = currentProtocol + iframe.src.substr(2);
     }
 });
+
+
+// Formulario de contacto
+document.getElementById('contactForm')?.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const fullName = document.getElementById('fullName').value;
+    const email = document.getElementById('email').value;
+    const countryCode = document.getElementById('countryCode').value;
+    const phone = document.getElementById('phone').value;
+    const message = document.getElementById('message').value;
+
+    // Construir el mensaje para WhatsApp
+    let whatsappMessage = `Nuevo contacto desde la web:%0A%0A`;
+    whatsappMessage += `*Nombre completo:* ${fullName}%0A`;
+    whatsappMessage += `*Correo electrónico:* ${email}%0A`;
+    whatsappMessage += `*Teléfono:* ${countryCode} ${phone}%0A`;
+
+    if (message) {
+        whatsappMessage += `*Mensaje:* ${message}%0A`;
+    }
+
+    // Número de WhatsApp (sin espacios, sin guiones)
+    const whatsappNumber = '573011959402'; // Usar el número sin el símbolo +
+
+    // Construir el enlace de WhatsApp
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+    // Abrir en una nueva pestaña
+    window.open(whatsappUrl, '_blank');
+
+    // Opcional: Resetear el formulario
+    this.reset();
+});

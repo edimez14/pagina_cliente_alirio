@@ -335,41 +335,62 @@
         <!-- Contact Section -->
         <section class="contact" id="contacto">
             <div class="contact-container">
-                <div class="contact-info">
+                <!-- Título y subtítulo centrados arriba -->
+                <div class="contact-header">
                     <h2 class="section-title">Contáctanos</h2>
                     <p class="contact-subtitle">¡Permítenos ayudarte a optimizar tu consumo energético!</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-detail">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Calle 36 # 37-40, Villavicencio, Colombia</span>
-                        </div>
-                        <div class="contact-detail">
-                            <i class="fas fa-phone"></i>
-                            <span>+57 320 844 7851</span>
-                        </div>
-                        <div class="contact-detail">
-                            <i class="fas fa-envelope"></i>
-                            <span>energiarenovablepoloatierra@gmail.com</span>
-                        </div>
-                        <div class="contact-detail">
-                            <i class="fas fa-clock"></i>
-                            <span>Lunes a Viernes: 9:00 - 17:00</span>
-                        </div>
-                    </div>
                 </div>
                 
-                <div class="contact-map">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3979.3741093651593!2d-73.642711625024!3d4.146614595827177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwMDgnNDcuOCJOIDczwrAzOCcyNC41Ilc!5e0!3m2!1ses!2sco!4v1753981575701!5m2!1ses!2sco"
-                        width="100%" 
-                        height="100%" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                    <button class="map-button" onclick="window.open('https://maps.app.goo.gl/ga9pdjWxfaMYxEz27', '_blank')">Ampliar el mapa</button>
+                <div class="contact-content">
+                    <div class="form-card">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="fullName">Nombre completo</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Teléfono</label>
+                                <div class="phone-input">
+                                    <select id="countryCode" name="countryCode" required>
+                                        <option value="+57">Colombia (+57)</option>
+                                        <option value="+1">Estados Unidos (+1)</option>
+                                        <option value="+52">México (+52)</option>
+                                        <option value="+51">Perú (+51)</option>
+                                        <option value="+56">Chile (+56)</option>
+                                        <option value="+54">Argentina (+54)</option>
+                                        <option value="+34">España (+34)</option>
+                                    </select>
+                                    <input type="tel" id="phone" name="phone" placeholder="Número de celular" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Mensaje (opcional)</label>
+                                <textarea id="message" name="message" rows="4"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="cta-button">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3979.3741093651593!2d-73.642711625024!3d4.146614595827177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwMDgnNDcuOCJOIDczwrAzOCcyNC41Ilc!5e0!3m2!1ses!2sco!4v1753981575701!5m2!1ses!2sco"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <button class="map-button" onclick="window.open('https://maps.app.goo.gl/ga9pdjWxfaMYxEz27', '_blank')">Ampliar el mapa</button>
+                    </div>
                 </div>
             </div>
         </section>
