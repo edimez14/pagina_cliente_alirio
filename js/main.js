@@ -146,7 +146,7 @@ document.getElementById('contactForm')?.addEventListener('submit', function (e) 
     }
 
     // Número de WhatsApp (sin espacios, sin guiones)
-    const whatsappNumber = '573223696262'; // Usar el número sin el símbolo +
+    const whatsappNumber = '573223696362'; // Usar el número sin el símbolo +
 
     // Construir el enlace de WhatsApp
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
