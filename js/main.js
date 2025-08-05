@@ -136,17 +136,17 @@ document.getElementById('contactForm')?.addEventListener('submit', function (e) 
     const message = document.getElementById('message').value;
 
     // Construir el mensaje para WhatsApp
-    let whatsappMessage = `Nuevo contacto desde la web:%0A%0A`;
-    whatsappMessage += `*Nombre completo:* ${fullName}%0A`;
-    whatsappMessage += `*Correo electrónico:* ${email}%0A`;
-    whatsappMessage += `*Teléfono:* ${countryCode} ${phone}%0A`;
+    let whatsappMessage = `Nuevo contacto desde la web:\n\n`;
+    whatsappMessage += `Nombre completo: ${fullName}\n`;
+    whatsappMessage += `Correo electrónico: ${email}\n`;
+    whatsappMessage += `Teléfono: ${countryCode} ${phone}\n`;
 
     if (message) {
-        whatsappMessage += `*Mensaje:* ${message}%0A`;
+        whatsappMessage += `Mensaje: ${message}`;
     }
 
     // Número de WhatsApp (sin espacios, sin guiones)
-    const whatsappNumber = '573011959402'; // Usar el número sin el símbolo +
+    const whatsappNumber = '573223696262'; // Usar el número sin el símbolo +
 
     // Construir el enlace de WhatsApp
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
